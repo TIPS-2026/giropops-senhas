@@ -70,7 +70,7 @@ Em 8 semanas, a turma trabalha como um time de plataforma de uma empresa que aca
 
 ## Regras do jogo
 
-1. **Tudo por PR.** Fork → branch → PR → review de um colega **e** do CODEOWNER → merge.
+1. **Tudo por PR, a partir de branches no próprio repositório** (sem fork): `feature/...`, `fix/...`, `hotfix/...`, `docs/...`, `chore/...` → PR → aprovação do **CODEOWNER** → merge. A `main` é protegida: não aceita push direto.
 2. **Conventional commits** no título dos PRs (`feat:`, `fix:`, `docs:`, `ci:`...).
 3. **Todo PR fecha uma issue** (`Closes #N`).
 4. **Nenhuma credencial estática.** Autenticação na AWS só via OIDC.
@@ -80,16 +80,20 @@ Em 8 semanas, a turma trabalha como um time de plataforma de uma empresa que aca
 
 ## Cronograma
 
+**28/09 a 30/09 – bônus:** organização dos times, leitura dos READMEs e das issues da semana 1.
+
+A semana 1 começa em **01/10**.
+
 | Semana | Tema | Até |
 |---|---|---|
-| 1 | Onboarding & contratos | 04/10 |
-| 2 | Fundação | 11/10 |
-| 3 | CI completo & rede base | 18/10 |
-| 4 | Imagem no ECR & borda | 25/10 |
-| 5 | Deploy em dev | 01/11 |
-| 6 | Produção | 08/11 |
-| 7 | Operação & hardening | 15/11 |
-| 8 | Incidentes & entrega | 22/11 |
+| 1 | Onboarding & contratos | 07/10 |
+| 2 | Fundação | 14/10 |
+| 3 | CI completo & rede base | 21/10 |
+| 4 | Imagem no ECR & borda | 28/10 |
+| 5 | Deploy em dev | 04/11 |
+| 6 | Produção | 11/11 |
+| 7 | Operação & hardening | 18/11 |
+| 8 | Incidentes & entrega | 25/11 |
 
 ## Definição de pronto
 
