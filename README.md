@@ -36,16 +36,16 @@ Em 8 semanas, a turma trabalha como um time de plataforma de uma empresa que aca
 
 ## Times
 
-| Trilha | Time | Team no GitHub | Squads (sub-teams) | Responsabilidade |
-|---|---|---|---|---|
-| Actions | **CI/Gates** | `@TIPS-2026/ci-gates` | `ci-a` Pipeline de PR · `ci-b` Governança | Tudo que decide se um PR **pode entrar**. Dono do `Dockerfile` |
-| Actions | **CD/Push** | `@TIPS-2026/cd-push` | `cd-a` Build & Push · `cd-b` Deploy & Promoção | Tudo **depois do merge**: publicar a imagem, deploy, promoção e rollback |
-| Actions | **Testes/Scans** | `@TIPS-2026/testes-scans` | `ts-a` Código & IaC · `ts-b` Imagem & Runtime | Ferramentas de teste e segurança usadas pelo CI e pelo CD. Dono do `docker-compose.yml` |
-| Terraform | **Redes** | `@TIPS-2026/redes` | `red-a` VPC · `red-b` DNS & Certificados | VPC, subnets, NAT, DNS e certificados |
-| Terraform | **Runtime** | `@TIPS-2026/runtime` | `run-a` State & Identidade · `run-b` Atlantis | Onde o Terraform roda: state, OIDC e Atlantis |
-| Terraform | **Compute** | `@TIPS-2026/compute` | `cmp-a` Cluster & Borda · `cmp-b` Serviço | Onde a aplicação roda: cluster, load balancer, registry e serviço |
+| Trilha | Time | Team no GitHub | Responsabilidade |
+|---|---|---|---|
+| Actions | **CI/Gates** | `@TIPS-2026/ci-gates` | Tudo que decide se um PR **pode entrar**. Dono do `Dockerfile` |
+| Actions | **CD/Push** | `@TIPS-2026/cd-push` | Tudo **depois do merge**: publicar a imagem, deploy, promoção e rollback |
+| Actions | **Testes/Scans** | `@TIPS-2026/testes-scans` | Ferramentas de teste e segurança usadas pelo CI e pelo CD. Dono do `docker-compose.yml` |
+| Terraform | **Redes** | `@TIPS-2026/redes` | VPC, subnets, NAT, DNS e certificados |
+| Terraform | **Runtime** | `@TIPS-2026/runtime` | Onde o Terraform roda: state, OIDC e Atlantis |
+| Terraform | **Compute** | `@TIPS-2026/compute` | Onde a aplicação roda: cluster, load balancer, registry e serviço |
 
-**Permissões:** cada time tem *write* nos repositórios de que é dono e *triage* nos demais (para se atribuir issues e aplicar labels). Os squads herdam as permissões do time. Mentores: `@TIPS-2026/mentores`.
+**Permissões:** cada time tem *write* nos repositórios de que é dono e *triage* nos demais (para se atribuir issues e aplicar labels). Cada time se organiza internamente como preferir. Mentores: `@TIPS-2026/mentores`.
 
 | Repositório | Write | Triage |
 |---|---|---|
@@ -64,7 +64,7 @@ Em 8 semanas, a turma trabalha como um time de plataforma de uma empresa que aca
 | Workflow da **main** que só consome o `pipelines` (build, scan, push, assinatura e deploy em dev, com promoção para prod) | CD/Push |
 | Workflows consumidores **curtos**: quem adota a plataforma não precisa entender como ela funciona | CI/Gates + CD/Push |
 | `CODEOWNERS` e templates de issue/PR | CI/Gates |
-| `TEAM.md` com os membros de cada squad | Todos |
+| `TEAM.md` com os membros de cada time | Todos |
 | `docs/postmortems/` com os postmortems do game day | Todos |
 | Diagrama da arquitetura final e guia de adoção da plataforma | Todos |
 
