@@ -36,14 +36,23 @@ Em 8 semanas, a turma trabalha como um time de plataforma de uma empresa que aca
 
 ## Times
 
-| Trilha | Time | Squads | Responsabilidade |
-|---|---|---|---|
-| Actions | **CI/Gates** | CI-A Pipeline de PR · CI-B Governança | Tudo que decide se um PR **pode entrar**. Dono do `Dockerfile` |
-| Actions | **CD/Push** | CD-A Build & Push · CD-B Deploy & Promoção | Tudo **depois do merge**: publicar a imagem, deploy, promoção e rollback |
-| Actions | **Testes/Scans** | TS-A Código & IaC · TS-B Imagem & Runtime | Ferramentas de teste e segurança usadas pelo CI e pelo CD. Dono do `docker-compose.yml` |
-| Terraform | **Redes** | RED-A VPC · RED-B DNS & Certificados | VPC, subnets, NAT, DNS e certificados |
-| Terraform | **Runtime** | RUN-A State & Identidade · RUN-B Atlantis | Onde o Terraform roda: state, OIDC e Atlantis |
-| Terraform | **Compute** | CMP-A Cluster & Borda · CMP-B Serviço | Onde a aplicação roda: cluster, load balancer, registry e serviço |
+| Trilha | Time | Team no GitHub | Squads (sub-teams) | Responsabilidade |
+|---|---|---|---|---|
+| Actions | **CI/Gates** | `@TIPS-2026/ci-gates` | `ci-a` Pipeline de PR · `ci-b` Governança | Tudo que decide se um PR **pode entrar**. Dono do `Dockerfile` |
+| Actions | **CD/Push** | `@TIPS-2026/cd-push` | `cd-a` Build & Push · `cd-b` Deploy & Promoção | Tudo **depois do merge**: publicar a imagem, deploy, promoção e rollback |
+| Actions | **Testes/Scans** | `@TIPS-2026/testes-scans` | `ts-a` Código & IaC · `ts-b` Imagem & Runtime | Ferramentas de teste e segurança usadas pelo CI e pelo CD. Dono do `docker-compose.yml` |
+| Terraform | **Redes** | `@TIPS-2026/redes` | `red-a` VPC · `red-b` DNS & Certificados | VPC, subnets, NAT, DNS e certificados |
+| Terraform | **Runtime** | `@TIPS-2026/runtime` | `run-a` State & Identidade · `run-b` Atlantis | Onde o Terraform roda: state, OIDC e Atlantis |
+| Terraform | **Compute** | `@TIPS-2026/compute` | `cmp-a` Cluster & Borda · `cmp-b` Serviço | Onde a aplicação roda: cluster, load balancer, registry e serviço |
+
+**Permissões:** cada time tem *write* nos repositórios de que é dono e *triage* nos demais (para se atribuir issues e aplicar labels). Os squads herdam as permissões do time. Mentores: `@TIPS-2026/mentores`.
+
+| Repositório | Write | Triage |
+|---|---|---|
+| `giropops-senhas` | ci-gates, cd-push, testes-scans | redes, runtime, compute |
+| `pipelines` | ci-gates, cd-push, testes-scans | redes, runtime, compute |
+| `terraform-modules` | redes, runtime, compute | ci-gates, cd-push, testes-scans |
+| `infra-live` | redes, compute (runtime: *maintain*) | ci-gates, cd-push, testes-scans |
 
 ## O que esperamos que seja entregue neste repositório
 
